@@ -1,0 +1,10 @@
+form(name="createUserForm", ng:submit="createUser(createUserForm)")
+  .form-group
+      label First Name:
+      input.form-control(type="text", ng:model="user.firstName")
+
+  .form-group
+      label Last Name:
+      input.form-control(type="text", ng:model="user.lastName")
+
+  button.btn.btn-default Create

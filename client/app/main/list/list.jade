@@ -1,0 +1,18 @@
+table.table.table-striped
+
+  thead
+    tr
+      th First Name
+      th Last Name
+      th
+
+  tbody
+    tr(ng:if="users.length === 0")
+      td.no-data-row(colspan="3") No Data Available in Table
+
+    tr(ng:repeat="curUser in users")
+      td {{ curUser.firstName }}
+      td {{ curUser.lastName }}
+      td
+        button.btn.btn-default.btn-sm(ng:click="deleteUser(curUser)")
+          i.glyphicon.glyphicon-remove
